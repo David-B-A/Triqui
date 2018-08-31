@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Btn_8.setText(j);
             Btn_8.setEnabled(false);
         }
-        else{
+        else if(v.getId() == R.id.Btn_9){
             Btn_9.setText(j);
             Btn_9.setEnabled(false);
         }
@@ -107,35 +107,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void Ganador(String letra){
 
-        if(Btn_1.getText().toString().equals(letra+"") && (Btn_2.getText().toString().equals(letra+"")) && (Btn_3.getText().toString().equals(letra+""))){
+        if(Btn_1.getText().toString().equals(letra) && (Btn_2.getText().toString().equals(letra)) && (Btn_3.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_4.getText().toString().equals(letra+"") && (Btn_5.getText().toString().equals(letra+"")) && (Btn_6.getText().toString().equals(letra+""))){
+        }else if(Btn_4.getText().toString().equals(letra) && (Btn_5.getText().toString().equals(letra)) && (Btn_6.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_7.getText().toString().equals(letra+"") && (Btn_8.getText().toString().equals(letra+"")) && (Btn_9.getText().toString().equals(letra+""))){
+        }else if(Btn_7.getText().toString().equals(letra) && (Btn_8.getText().toString().equals(letra)) && (Btn_9.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_1.getText().toString().equals(letra+"") && (Btn_4.getText().toString().equals(letra+"")) && (Btn_7.getText().toString().equals(letra+""))){
+        }else if(Btn_1.getText().toString().equals(letra) && (Btn_4.getText().toString().equals(letra)) && (Btn_7.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_2.getText().toString().equals(letra+"") && (Btn_5.getText().toString().equals(letra+"")) && (Btn_8.getText().toString().equals(letra+""))){
+        }else if(Btn_2.getText().toString().equals(letra) && (Btn_5.getText().toString().equals(letra)) && (Btn_8.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_3.getText().toString().equals(letra+"") && (Btn_6.getText().toString().equals(letra+"")) && (Btn_9.getText().toString().equals(letra+""))){
+        }else if(Btn_3.getText().toString().equals(letra) && (Btn_6.getText().toString().equals(letra)) && (Btn_9.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_1.getText().toString().equals(letra+"") && (Btn_5.getText().toString().equals(letra+"")) && (Btn_9.getText().toString().equals(letra+""))){
+        }else if(Btn_1.getText().toString().equals(letra) && (Btn_5.getText().toString().equals(letra)) && (Btn_9.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
-        }else if(Btn_3.getText().toString().equals(letra+"") && (Btn_5.getText().toString().equals(letra+"")) && (Btn_7.getText().toString().equals(letra+""))){
+        }else if(Btn_3.getText().toString().equals(letra) && (Btn_5.getText().toString().equals(letra)) && (Btn_7.getText().toString().equals(letra))){
             Edt_1.setText("El ganador es "+letra);
             deshabilitar();
 
@@ -151,13 +151,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Edt_1.setEnabled(false);
         Btn_1.setEnabled(false);
         Btn_2.setEnabled(false);
+        Btn_3.setEnabled(false);
         Btn_4.setEnabled(false);
+        Btn_5.setEnabled(false);
         Btn_6.setEnabled(false);
+        Btn_7.setEnabled(false);
         Btn_8.setEnabled(false);
         Btn_9.setEnabled(false);
     }
 
     protected void resetear(){
+        contador = 0;
+        conta = 0;
+        
         Edt_1.setEnabled(true);
         Edt_1.setText("");
 
